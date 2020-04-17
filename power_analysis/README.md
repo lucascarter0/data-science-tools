@@ -7,11 +7,13 @@ Relevant information contained in the contour plots:
 
 
 ## Gaussian Distribution
+### Two Sample T-Test
+![Two Sample T-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ttest_gaussian.png)
 ### Two Sample KS-Test
 ![Two Sample KS-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ks_gaussian.png)
 ### Wilcoxon Signed-Rank Test
-
-### Two Sample T-Test
+![Wilcoxon Signed-Rank Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/wilcoxon_gaussian.png)
 
 ## Binomial Distribution
 ### McNemar Test
+![McNemar Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/mcnemar_binomial.png)
