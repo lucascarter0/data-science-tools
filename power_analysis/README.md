@@ -9,9 +9,7 @@ Relevant information contained in the contour plots:
 ## Gaussian Distribution
 Two Sample T-Test |  Two Sample KS-Test | Wilcoxon Signed-Rank Test
 :-------------------------:|:-------------------------:| :-------------------------:
-![Two Sample T-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ttest_gaussian.png)
-  |  ![Two Sample KS-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ks_gaussian.png)
-| ![Wilcoxon Signed-Rank Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/wilcoxon_gaussian.png)
+![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ttest_gaussian.png) |  ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ks_gaussian.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/wilcoxon_gaussian.png)
 ### Two Sample T-Test
 ![Two Sample T-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ttest_gaussian.png)
 ### Two Sample KS-Test
