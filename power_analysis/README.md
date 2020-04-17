@@ -8,7 +8,7 @@ Relevant information contained in the contour plots:
 
 ## Gaussian Distribution
 ### Two Sample KS-Test
-![Two Sample KS-Test.](https://github.com/lucascarter0/data-science-tools/tree/master/power_analysis/ks_gaussian.png "Two Sample KS Test for Gaussian Distribution.")
+![Two Sample KS-Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ks_gaussian.png)
 ### Wilcoxon Signed-Rank Test
 
 ### Two Sample T-Test
