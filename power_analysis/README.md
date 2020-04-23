@@ -5,7 +5,7 @@ Relevant information contained in the contour plots:
 - For a fixed sample size and known distribution, which hypothesis test has the strongest statistical power?
 - For a known distribution and expected effect size, how many samples are needed to achieve a desired statistical power?
 
-**It should be noted that "effect size" in these examples is a bit of an abuse of notation. The effect size is not based on the hypothesis test itself. It is simply a shift in the mean value of one distribution relative to another. This was done to force the hypothesis test result that was intended through the Monte Carlo iterations. **
+**It should be noted that "effect size" in these examples is a bit of an abuse of notation. The effect size in these plots is not based on the hypothesis test itself. It is simply a shift in the mean value of one distribution relative to another. This was done to force the hypothesis test result that was intended through the Monte Carlo iterations. **
 
 ## Gaussian Distribution
 T-Test is most powerful of the compared tests for Gaussian distribution. Not surprising, since it is a parametric test vs non-parametric tests.
@@ -15,7 +15,7 @@ Two Sample T-Test |  Two Sample KS-Test | Wilcoxon Signed-Rank Test | Kruskal-Wa
 
 ## Binomial Distribution
 ### McNemar Test
-![McNemar Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/mcnemar_binomial.png)
+![McNemar Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/binomial_mcnemar.png)
 
 ## Exponential Distribution
 The Mann-Whitney U Test appears to be the most powerful non-parametric test for the exponential distribution.
