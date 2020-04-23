@@ -5,13 +5,20 @@ Relevant information contained in the contour plots:
 - For a fixed sample size and known distribution, which hypothesis test has the strongest statistical power?
 - For a known distribution and expected effect size, how many samples are needed to achieve a desired statistical power?
 
+**It should be noted that "effect size" in these examples is a bit of an abuse of notation. The effect size is not based on the hypothesis test itself. It is simply a shift in the mean value of one distribution relative to another. This was done to force the hypothesis test result that was intended through the Monte Carlo iterations. **
 
 ## Gaussian Distribution
-T-Test is most powerful of the three for Gaussian distribution. Not surprising, since it is a parametric test vs two non-parametric tests.
-Two Sample T-Test |  Two Sample KS-Test | Wilcoxon Signed-Rank Test
-:-------------------------:|:-------------------------:| :-------------------------:
-![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ttest_gaussian.png) |  ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/ks_gaussian.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/wilcoxon_gaussian.png)
+T-Test is most powerful of the compared tests for Gaussian distribution. Not surprising, since it is a parametric test vs non-parametric tests.
+Two Sample T-Test |  Two Sample KS-Test | Wilcoxon Signed-Rank Test | Kruskal-Wallis H Test | Mann-Whitney U Test
+:-------------------------:|:-------------------------:| :-------------------------: | :-------------------------:| :-------------------------: 
+![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ttest.png) |  ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_mannwhitney.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_kruskalwallis.png)
 
 ## Binomial Distribution
 ### McNemar Test
 ![McNemar Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/mcnemar_binomial.png)
+
+## Exponential Distribution
+The Mann-Whitney U Test appears to be the most powerful non-parametric test for the exponential distribution.
+Two Sample KS-Test | Wilcoxon Signed-Rank Test | Kruskal-Wallis H Test | Mann-Whitney U Test
+:-------------------------:| :-------------------------: | :-------------------------:| :-------------------------: 
+(https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_mannwhitney.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_kruskalwallis.png)
