@@ -11,14 +11,14 @@ Relevant information contained in the contour plots:
 T-Test is most powerful of the compared tests for Gaussian distribution. Not surprising, since it is a parametric test vs non-parametric tests.
 Two Sample T-Test |  Two Sample KS-Test | Wilcoxon Signed-Rank Test | Kruskal-Wallis H Test | Mann-Whitney U Test
 :-------------------------:|:-------------------------:| :-------------------------: | :-------------------------:| :-------------------------: 
-![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ttest.png) |  ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_mannwhitney.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_kruskalwallis.png)
+![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ttest.png) |  ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_kruskalwallis.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/gaussian_mannwhitney.png)
 
 ## Binomial Distribution
 ### McNemar Test
 ![McNemar Test.](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/binomial_mcnemar.png)
 
 ## Exponential Distribution
-The Mann-Whitney U Test appears to be the most powerful non-parametric test for the exponential distribution.
+The Mann-Whitney U Test or the KS Test appears to be the most powerful non-parametric test for the exponential distribution.
 Two Sample KS-Test | Wilcoxon Signed-Rank Test | Kruskal-Wallis H Test | Mann-Whitney U Test
 :-------------------------:| :-------------------------: | :-------------------------:| :-------------------------: 
-![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_mannwhitney.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_kruskalwallis.png)
+![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_ks.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_wilcoxon.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_kruskalwallis.png) | ![](https://github.com/lucascarter0/data-science-tools/blob/master/power_analysis/exponential_mannwhitney.png) 
