@@ -13,10 +13,13 @@ import matplotlib.pyplot as plt
 #### for set_labels. These utilities helped save
 #### time in plotting filter performance
 
-def set_labels(ax: plt.Axes,
-               title: Optional[str]=None,
-               xlabel: Optional[str]=None,
-               ylabel: Optional[str]=None) -> None:
+
+def set_labels(
+    ax: plt.Axes,
+    title: Optional[str] = None,
+    xlabel: Optional[str] = None,
+    ylabel: Optional[str] = None,
+) -> None:
     """For axis ax, add labels for x-axis, y-axis, or title if provided."""
     if xlabel is not None:
         ax.set_xlabel(xlabel)
@@ -24,47 +27,84 @@ def set_labels(ax: plt.Axes,
         ax.set_ylabel(ylabel)
     if title is not None:
         ax.set_title(title)
+
+
+def plot_residual_error(
+    residual: np.array, dt: float = 1.0, ax: Optional[plt.Axes] = None
+) -> plt.Axes:
+    """Plot filter residual error.
+
+    Parameters
+    ----------
+    residual : np.array
+        Array of residual error values.
+    dt : float, optional
+        Time step between values. Used to create a time array starting
+        at zero. Defaults to 1.
+    ax : Optional[plt.Axes], optional
+        Axis to plot values. One is created if not provided.
+    Returns
+    -------
+    plt.Axes
+        Formatted plot.
+    """
+
+    if not isinstance(residual, np.ndarray):
+        residual = np.asarray(residual)
+
+    if ax is None:
+        _, ax = plt.subplots()
+
+    time = np.arange(0, residual.size * dt, dt)
+    ax.plot(time, residual, linewidth=2)
+
+    set_labels(
+        ax=ax,
+        xlabel="Time (seconds)",
+        ylabel="Residual Error",
+        title="Residual Error over Time",
+    )
     ax.grid()
 
+    return ax
 
 
+def plot_squared_residual_error(
+    residual: np.ndarray, dt: float = 1.0, ax: Optional[plt.Axes] = None
+) -> plt.Axes:
+    """Plot squared residual error of filter over time.
 
-def plot_res(res, dt=1,ax=plt):
-    t = np.arange(0, len(res)*dt, dt)
-    ax.plot(t, res,linewidth=2)
-    if ax is plt:
-        plt.xlabel('time (sec)')
-        plt.ylabel('residual')
-        plt.title('residuals')
-        plt.show()
-    else:
-        ax.set_xlabel('time (sec)')
-        ax.set_ylabel('residual')
-        ax.set_title('Residual')
+    Parameters
+    ----------
+    residual : np.array
+        Array of residual error values.
+    dt : float, optional
+        Time step between values. Used to create a time array starting
+        at zero. Defaults to 1.
+    ax : Optional[plt.Axes], optional
+        Axis to plot values. One is created if not provided.
+    Returns
+    -------
+    plt.Axes
+        Formatted plot.
+    """
+
+    squared_residual = np.power(residual, 2)
+
+    ax = plot_residual_error(squared_residual, dt, ax)
+
+    set_labels(
+        ax,
+        title="Squared Residual Error vs Time",
+        xlabel="Time (seconds)",
+        ylabel="Squared Residual Error",
+    )
     ax.grid()
 
-
-def plot_r2(res, dt=1, ax=plt, t=None):
-    if t is None:
-        t = np.arange(0, len(res)*dt, dt)
-    r2 = np.power(res,2)
-    ax.plot(t, r2,linewidth=3)
-    if ax is plt:
-        plt.xlabel('Time (sec)')
-        plt.ylabel('$R^2$')
-        plt.title('$R^2$ vs Time')
-        plt.show()
-    else:
-        ax.set_xlabel('Time (sec)')
-        ax.set_ylabel('$R^2$')
-        ax.set_title('$R^2$ vs Time')
-    ax.grid()
+    return ax
 
 
-
-def plot_probs(probs, dt=1,ax=plt):
-    t = np.arange(0, len(probs)*dt, dt)
+def plot_probs(probs, dt=1, ax=plt):
+    t = np.arange(0, len(probs) * dt, dt)
     ax.plot(t, probs, linewidth=3)
-
-
 
