@@ -16,6 +16,7 @@ from filterpy.kalman import IMMEstimator as IMM
 import target_model as tgt
 import plotting
 
+
 def init_ca_filter(dt, std):
     cafilter = KalmanFilter(dim_x=3, dim_z=1)
     cafilter.x = np.array([0.0, 0.0, 0.0])
@@ -102,13 +103,9 @@ for t, z in enumerate(z_xs2):
 
 #### Plot true target motion and noisy measurements
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter(zs2[:, 0], zs2[:, 1], c="k", alpha=0.25, label="Measurements")
-ax.plot(
-    track2[:, 0], track2[:, 1], linewidth=3, c="k", label="True Target Motion"
-)
-plotting.set_labels(
-    ax=ax, title="Motion of a Maneuvering Target", xlabel="X", ylabel="Y"
-)
+
+ax = plotting.plot_xy_target_truth(track2, zs2, ax)
+
 ax.legend()
 fig.tight_layout()
 fig.savefig("true_motion.png", dpi=fig.dpi, bbox_inches="tight")

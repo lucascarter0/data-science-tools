@@ -4,6 +4,7 @@ Created on Sat Nov 30 19:03:22 2019
 
 @author: Lucas Carter
 """
+
 from typing import Optional
 
 import numpy as np
@@ -43,6 +44,7 @@ def plot_residual_error(
         at zero. Defaults to 1.
     ax : Optional[plt.Axes], optional
         Axis to plot values. One is created if not provided.
+
     Returns
     -------
     plt.Axes
@@ -83,6 +85,7 @@ def plot_squared_residual_error(
         at zero. Defaults to 1.
     ax : Optional[plt.Axes], optional
         Axis to plot values. One is created if not provided.
+
     Returns
     -------
     plt.Axes
@@ -108,3 +111,47 @@ def plot_probs(probs, dt=1, ax=plt):
     t = np.arange(0, len(probs) * dt, dt)
     ax.plot(t, probs, linewidth=3)
 
+
+def plot_xy_target_truth(
+    position_array: np.ndarray,
+    measurement_array: np.ndarray,
+    ax: Optional[plt.Axes] = None,
+) -> plt.Axes:
+    """Plot true target position in x-y plane with sensor measurements.
+
+    Parameters
+    ----------
+    position_array : np.ndarray
+        _description_
+    measurement_array : np.ndarray
+        _description_
+    ax : Optional[plt.Axes], optional
+        Axis to plot values. One is created if not provided.
+
+    Returns
+    -------
+    plt.Axes
+        Formatted plot.
+    """
+    if ax is None:
+        _, ax = plt.subplots()
+
+    ax.scatter(
+        measurement_array[:, 0],
+        measurement_array[:, 1],
+        c="k",
+        alpha=0.25,
+        label="Measurements",
+    )
+    ax.plot(
+        position_array[:, 0],
+        position_array[:, 1],
+        linewidth=3,
+        c="k",
+        label="True Target Position",
+    )
+    set_labels(ax=ax, title="True Target Motion", xlabel="X", ylabel="Y")
+    ax.legend()
+    ax.grid()
+
+    return ax
