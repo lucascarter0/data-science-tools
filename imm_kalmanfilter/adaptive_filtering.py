@@ -108,7 +108,7 @@ ax = plotting.plot_xy_target_truth(track2, zs2, ax)
 
 ax.legend()
 fig.tight_layout()
-fig.savefig("true_motion.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/true_motion.png", dpi=fig.dpi, bbox_inches="tight")
 
 
 #### Plot comparison of CA and CV filters
@@ -134,7 +134,7 @@ plotting.set_labels(
 )
 ax.legend()
 fig.tight_layout()
-fig.savefig("initial_performance.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/initial_performance.png", dpi=fig.dpi, bbox_inches="tight")
 
 
 ## Plot R^2 in two parts -
@@ -154,7 +154,7 @@ for ax in [ax1, ax2]:
     ax.legend(["Constant Velocity Filter", "Constant Acceleration Filter"])
     ax.set_ylim(bottom=0)
     ax.grid()
-fig.savefig("initial_performance_R2.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/initial_performance_R2.png", dpi=fig.dpi, bbox_inches="tight")
 
 
 t = np.arange(len(xs2))[:]
@@ -178,7 +178,7 @@ plotting.set_labels(
 )
 ax2.legend(["$P$(CV)", "$P$(CA)"])
 fig.tight_layout()
-fig.savefig("mmae_compare.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/mmae_compare.png", dpi=fig.dpi, bbox_inches="tight")
 
 
 #### Plot IMM Performance vs MMAE
@@ -195,7 +195,7 @@ plotting.set_labels(
     ylabel="$P$",
 )
 fig.tight_layout()
-fig.savefig("imm_compare.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/imm_compare.png", dpi=fig.dpi, bbox_inches="tight")
 
 
 #### Comparing IMM vs MMAE
@@ -205,5 +205,5 @@ plotting.plot_squared_residual_error((xs_imm - xs2)[t], dt=dt, ax=ax)
 ax.legend(["MMAE Filter", "IMM Filter"])
 ax.grid()
 fig.tight_layout()
-fig.savefig("imm_mmae_compare.png", dpi=fig.dpi, bbox_inches="tight")
+fig.savefig("figures/imm_mmae_compare.png", dpi=fig.dpi, bbox_inches="tight")
 
